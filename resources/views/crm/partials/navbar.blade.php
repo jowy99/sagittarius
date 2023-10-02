@@ -29,7 +29,7 @@
                         </x-nav-link>
                         <ul role="list" class="mt-2 mx-6 space-y-1">
                             <li>
-                                <x-nav-link>
+                                <x-nav-link :href="route('crm.add-dev')" :active="request()->routeIs('crm.add-dev')">
                                     <x-ri-add-fill class="h-6 w-6" />
                                     Add dev projects
                                 </x-nav-link>

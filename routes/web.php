@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\crm\dev\ShowAddProjectsController;
+use App\Http\Controllers\crm\dev\StoreDevProjectsController;
 
 Route::get('/', function () {
     return view('website.home');
@@ -13,6 +15,8 @@ Route::middleware('admin')
             ->as('crm.')
             ->group(function () {
                 Route::get('/', function () { return view('crm.index');})->name('crm');
+                Route::get('/dev/add', ShowAddProjectsController::class)->name('add-dev');
+                Route::post('/dev/store', StoreDevProjectsController::class)->name('store-dev');
             });
     });
 
