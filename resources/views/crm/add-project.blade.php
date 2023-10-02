@@ -2,9 +2,9 @@
 
 @section('main')
 
-<h1 class="mt-4 text-4xl font-bold text-center text-white">Dev Projects</h1>
+<h1 class="mt-4 text-4xl font-bold text-center text-white">Projects</h1>
 
-<form action="{{ route('crm.store-dev') }}" method="post">
+<form action="{{ route('crm.store-proj') }}" method="post">
     @csrf
     <!-- Home page -->
 

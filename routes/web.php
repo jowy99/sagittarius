@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\crm\dev\ShowAddProjectsController;
+use App\Http\Controllers\crm\dev\ShowAddDevProjectsController;
+use App\Http\Controllers\crm\projects\ShowAddProjectsController;
 use App\Http\Controllers\crm\dev\StoreDevProjectsController;
+use App\Http\Controllers\crm\projects\StoreProjectsController;
 
 Route::get('/', function () {
     return view('website.home');
@@ -15,8 +17,14 @@ Route::middleware('admin')
             ->as('crm.')
             ->group(function () {
                 Route::get('/', function () { return view('crm.index');})->name('crm');
-                Route::get('/dev/add', ShowAddProjectsController::class)->name('add-dev');
+
+                // Dev
+                Route::get('/dev/add', ShowAddDevProjectsController::class)->name('add-dev');
                 Route::post('/dev/store', StoreDevProjectsController::class)->name('store-dev');
+
+                // Projects
+                Route::get('/projects/add', ShowAddProjectsController::class)->name('add-proj');
+                Route::post('/projects/store', StoreProjectsController::class)->name('store-proj');
             });
     });
 

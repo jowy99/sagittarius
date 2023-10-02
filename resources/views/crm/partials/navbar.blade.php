@@ -48,7 +48,7 @@
                             </li>
                             <hr>
                             <li>
-                                <x-nav-link>
+                                <x-nav-link :href="route('crm.add-proj')" :active="request()->routeIs('crm.add-proj')">
                                     <x-ri-add-fill class="h-6 w-6" />
                                     Add other projects
                                 </x-nav-link>
