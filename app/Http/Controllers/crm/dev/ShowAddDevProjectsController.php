@@ -10,6 +10,6 @@ class ShowAddDevProjectsController extends Controller
 {
     public function __invoke(): View
     {
-        return view('crm.add-dev');
+        return view('crm.dev.add-dev');
     }
 }

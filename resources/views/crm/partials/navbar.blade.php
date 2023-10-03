@@ -35,15 +35,9 @@
                                 </x-nav-link>
                             </li>
                             <li>
-                                <x-nav-link>
-                                    <x-feathericon-edit class="h-6 w-6" />
-                                    Edit dev projects
-                                </x-nav-link>
-                            </li>
-                            <li>
-                                <x-nav-link>
-                                    <x-ri-delete-bin-6-line class="h-6 w-6" />
-                                    Remove dev projects
+                                <x-nav-link :href="route('crm.list-dev')" :active="request()->routeIs('crm.list-dev')">
+                                    <x-tabler-list class="h-6 w-6" />
+                                    Dev projects list
                                 </x-nav-link>
                             </li>
                             <hr>
@@ -54,17 +48,23 @@
                                 </x-nav-link>
                             </li>
                             <li>
-                                <x-nav-link>
-                                    <x-feathericon-edit class="h-6 w-6" />
-                                    Edit other projects
+                                <x-nav-link :href="route('crm.list-proj')" :active="request()->routeIs('crm.list-proj')">
+                                    <x-tabler-list class="h-6 w-6" />
+                                    Projects list
                                 </x-nav-link>
                             </li>
-                            <li>
-                                <x-nav-link>
-                                    <x-ri-delete-bin-6-line class="h-6 w-6" />
-                                    Remove dev projects
-                                </x-nav-link>
-                            </li>
+<!--                            <li>-->
+<!--                                <x-nav-link>-->
+<!--                                    <x-feathericon-edit class="h-6 w-6" />-->
+<!--                                    Edit other projects-->
+<!--                                </x-nav-link>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <x-nav-link>-->
+<!--                                    <x-ri-delete-bin-6-line class="h-6 w-6" />-->
+<!--                                    Remove dev projects-->
+<!--                                </x-nav-link>-->
+<!--                            </li>-->
                         </ul>
                     </li>
                     <li>

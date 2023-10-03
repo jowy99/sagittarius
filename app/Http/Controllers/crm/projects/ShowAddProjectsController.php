@@ -11,6 +11,6 @@ class ShowAddProjectsController extends Controller
 {
     public function __invoke(): View
     {
-        return view('crm.add-project');
+        return view('crm.projects.add-project');
     }
 }

@@ -2,9 +2,12 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\crm\dev\ListDevProjectsController;
 use App\Http\Controllers\crm\dev\ShowAddDevProjectsController;
-use App\Http\Controllers\crm\projects\ShowAddProjectsController;
 use App\Http\Controllers\crm\dev\StoreDevProjectsController;
+
+use App\Http\Controllers\crm\projects\ListProjectsController;
+use App\Http\Controllers\crm\projects\ShowAddProjectsController;
 use App\Http\Controllers\crm\projects\StoreProjectsController;
 
 Route::get('/', function () {
@@ -19,10 +22,12 @@ Route::middleware('admin')
                 Route::get('/', function () { return view('crm.index');})->name('crm');
 
                 // Dev
+                Route::get('/dev/list', ListDevProjectsController::class)->name('list-dev');
                 Route::get('/dev/add', ShowAddDevProjectsController::class)->name('add-dev');
                 Route::post('/dev/store', StoreDevProjectsController::class)->name('store-dev');
 
                 // Projects
+                Route::get('/projects/list', ListProjectsController::class)->name('list-proj');
                 Route::get('/projects/add', ShowAddProjectsController::class)->name('add-proj');
                 Route::post('/projects/store', StoreProjectsController::class)->name('store-proj');
             });
