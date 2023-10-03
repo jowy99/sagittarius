@@ -23,6 +23,9 @@
                                 <a href="{{ route('crm.delete-proj', $proj->id) }}" class="text-red-500">
                                     {{ __('Delete') }}
                                 </a>
+                                <a href="{{ route('crm.edit-proj', $proj->id) }}" class="text-yellow-500">
+                                    {{ __('Edit') }}
+                                </a>
                             </div>
                         </td>
                     </tr>
