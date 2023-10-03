@@ -18,6 +18,13 @@
                     <tr>
                         <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-carbon-800 sm:pl-6 lg:pl-8">{{ $dev->title }}</td>
                         <td class="whitespace-nowrap px-3 py-4 text-sm text-carbon-800">{{ $dev->description }}</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm text-carbon-800">
+                            <div>
+                                <a href="{{ route('crm.delete-dev', $dev->id) }}" class="text-red-500">
+                                    {{ __('Delete') }}
+                                </a>
+                            </div>
+                        </td>
                     </tr>
 
                     <!-- More people... -->
