@@ -1,5 +1,5 @@
 <div>
-    <label for="{{ $id }}" class="block text-sm font-medium leading-6 text-white">{{ $label }}</label>
+    <label for="{{ $id }}" class="capitalize block text-sm font-medium leading-6 text-white">{{ $label }}</label>
     <div class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10 bg-white">
         <div class="text-center">
             <svg class="mx-auto h-8 w-8 text-gray-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

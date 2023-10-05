@@ -3,12 +3,20 @@
 @section('main')
     <h1 class="mt-4 text-4xl font-bold text-center text-white">Home</h1>
 
-    <form action="">
-
+    <form action="" method="post">
+        @csrf
         <!-- Home page -->
 
         <div class="">
             <h2 class="ml-8 text-2xl text-white">Hero section</h2>
+            <div class="grid grid-cols-2 gap-4 m-4">
+                <x-form.input-text
+                    id="nombre"
+                    name="nombre"
+                    label="Nombre"
+                    placeholder="Escribe tu nombre aquí"
+                ></x-form.input-text>
+            </div>
             <div class="grid grid-cols-2 gap-4 m-4">
                 <x-form.textarea
                     id="herotext"

@@ -4,7 +4,7 @@
     <div class="w-full h-screen flex">
         <div class="w-6/12 h-full flex flex-col gap-4 items-center justify-center">
             <h1 class="uppercase font-serif text-6xl">joël arnaud</h1>
-            <p>
+            <p id="herotext">
                 Soy un joven de 23 años.
             </p>
             <a href="">

@@ -14,6 +14,7 @@
             <x-form.input-text
                 id="title"
                 label="Título"
+                type="text"
                 name="title"
                 placeholder="Escribe un título..."
             ></x-form.input-text>
@@ -26,8 +27,6 @@
         </div>
     </div>
 
-    <div class="flex items-center justify-center m-8">
-        <x-form.submit/>
-    </div>
+    <x-form.submit/>
 </form>
 @endsection

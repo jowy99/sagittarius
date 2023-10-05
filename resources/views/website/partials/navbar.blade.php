@@ -25,6 +25,11 @@
                         </x-home-nav-link>
                     </li>
                     <li>
+                        <x-home-nav-link :href="route('opinions')" :active="request()->routeIs('opinions')">
+                            <x-far-comment class="h-6 w-6" />
+                        </x-home-nav-link>
+                    </li>
+                    <li>
                         <x-home-nav-link :href="route('crm.crm')" :active="request()->routeIs('crm.crm')">
                             <x-akar-dashboard class="h-6 w-6" />
                         </x-home-nav-link>

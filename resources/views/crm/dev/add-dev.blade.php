@@ -13,10 +13,18 @@
         <div class="grid grid-cols-2 gap-4 m-4">
             <x-form.input-text
                 id="title"
+                type="text"
                 label="Título"
                 name="title"
                 placeholder="Escribe un título..."
             ></x-form.input-text>
+            <x-form.input-file
+                id="image"
+                name="image"
+                label="Imagen"
+            ></x-form.input-file>
+        </div>
+        <div class="grid grid-cols-2 gap-4 m-4">
             <x-form.textarea
                 id="description"
                 label="Descripción"
@@ -26,8 +34,6 @@
         </div>
     </div>
 
-    <div class="flex items-center justify-center m-8">
-        <x-form.submit/>
-    </div>
+    <x-form.submit/>
 </form>
 @endsection

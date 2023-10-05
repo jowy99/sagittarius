@@ -68,6 +68,20 @@
                         </ul>
                     </li>
                     <li>
+                        <x-nav-link :href="route('opinions')" :active="request()->routeIs('opinions')">
+                            <x-far-comment class="w-6 h-6" />
+                            Opinions
+                        </x-nav-link>
+                        <ul role="list" class="mt-2 mx-6 space-y-1">
+                            <li>
+                                <x-nav-link>
+                                    <x-feathericon-edit class="h-6 w-6" />
+                                    Edit opinions
+                                </x-nav-link>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
                         <x-nav-link>
                             <x-feathericon-mail class="h-6 w-6" />
                             Contact

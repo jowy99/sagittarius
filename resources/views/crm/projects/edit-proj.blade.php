@@ -11,6 +11,7 @@
             <x-form.input-text
                 id="title"
                 label="Título"
+                type="text"
                 name="title"
                 value="{{ $projs->title }}"
                 placeholder="Escribe un título..."
@@ -24,9 +25,7 @@
         </div>
     </div>
 
-    <div class="flex items-center justify-center m-8">
-        <x-form.submit/>
-    </div>
+    <x-form.submit/>
     @csrf
     @method('PUT')
 </form>

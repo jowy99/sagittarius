@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\crm\dev\ListDevProjectsController;
 use App\Http\Controllers\crm\dev\ShowAddDevProjectsController;
 use App\Http\Controllers\crm\dev\StoreDevProjectsController;
@@ -20,12 +21,17 @@ Route::get('/', function () {
     return view('website.home');
 })->name('home');
 
+Route::get('/opinions', function () {
+    return view('website.opinions');
+})->name('opinions');
+
 Route::middleware('admin')
     ->group(function () {
         Route::prefix('/crm')
             ->as('crm.')
             ->group(function () {
-                Route::get('/', function () { return view('crm.index');})->name('crm');
+                // Home
+                Route::get('/', function () { return view('crm.index'); })->name('crm');
 
                 // Dev
                 Route::get('/dev/list', ListDevProjectsController::class)->name('list-dev');
@@ -41,13 +47,9 @@ Route::middleware('admin')
                 Route::post('/projects/store', StoreProjectsController::class)->name('store-proj');
                 Route::get('/projects/delete/{id}', DeleteProjetcsController::class)->name('delete-proj');
                 Route::get('/projects/{id}/edit', ShowEditProjectsController::class)->name('edit-proj');
-                Route::put('/projects/{id}/update', UpdateProjectsController::class)->name('update-proj');
+                Route::post('/projects/{id}/update', UpdateProjectsController::class)->name('update-proj');
             });
     });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
