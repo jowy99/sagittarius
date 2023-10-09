@@ -12,7 +12,8 @@
                 <x-p>Si tienes alguna pregunta, colaboración o simplemente quieres saludar, no dudes en ponerte en contacto conmigo. Estaré encantado/a de escucharte y responder lo antes posible.</x-p>
             </div>
             <hr class="mt-8 mb-4">
-            <form action="">
+            <form action="{{ route('send-contact') }}" method="post">
+                @csrf
                 <div class="space-y-4 md:space-y-8">
                     <div class="grid gap-2 md:grid-cols-2 md:gap-4">
                         <x-form.input-text
@@ -41,9 +42,9 @@
                     </div>
                     <div>
                         <x-form.textarea
-                            id="msg"
-                            name="msg"
-                            label="msg"
+                            id="message"
+                            name="message"
+                            label="message"
                             placeholder="Mensaje"
                         ></x-form.textarea>
                     </div>

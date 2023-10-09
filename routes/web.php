@@ -21,6 +21,8 @@ use App\Http\Controllers\crm\opinions\EditOpinionsSiteController;
 use App\Http\Controllers\crm\opinions\ExportOpinionsController;
 use App\Http\Controllers\website\opinions\StoreOpinionsController;
 
+use App\Http\Controllers\website\contact\SendContactRequestController;
+
 Route::get('/', function () {
     return view('website.home');
 })->name('home');
@@ -34,6 +36,8 @@ Route::post('/opinions/store', StoreOpinionsController::class)->name('opinions-s
 Route::get('/contact', function () {
     return view('website.contact');
 })->name('contact');
+
+Route::post('/contact', SendContactRequestController::class)->name('send-contact');
 
 Route::middleware('admin')
     ->group(function () {
