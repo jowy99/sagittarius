@@ -74,7 +74,7 @@
                         </x-nav-link>
                         <ul role="list" class="mt-2 mx-6 space-y-1">
                             <li>
-                                <x-nav-link>
+                                <x-nav-link :href="route('crm.opinions')" :active="request()->routeIs('crm.opinions')">
                                     <x-feathericon-edit class="h-6 w-6" />
                                     Edit opinions
                                 </x-nav-link>

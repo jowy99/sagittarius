@@ -17,6 +17,8 @@ use App\Http\Controllers\crm\projects\DeleteProjetcsController;
 use App\Http\Controllers\crm\projects\ShowEditProjectsController;
 use App\Http\Controllers\crm\projects\UpdateProjectsController;
 
+use App\Http\Controllers\crm\opinions\EditOpinionsSiteController;
+
 Route::get('/', function () {
     return view('website.home');
 })->name('home');
@@ -24,6 +26,10 @@ Route::get('/', function () {
 Route::get('/opinions', function () {
     return view('website.opinions');
 })->name('opinions');
+
+Route::get('/contact', function () {
+    return view('website.contact');
+})->name('contact');
 
 Route::middleware('admin')
     ->group(function () {
@@ -48,6 +54,9 @@ Route::middleware('admin')
                 Route::get('/projects/delete/{id}', DeleteProjetcsController::class)->name('delete-proj');
                 Route::get('/projects/{id}/edit', ShowEditProjectsController::class)->name('edit-proj');
                 Route::post('/projects/{id}/update', UpdateProjectsController::class)->name('update-proj');
+
+                // Opinions
+                Route::get('/opinions', EditOpinionsSiteController::class)->name('opinions');
             });
     });
 

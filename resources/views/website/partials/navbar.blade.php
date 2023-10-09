@@ -20,7 +20,7 @@
                         </x-home-nav-link>
                     </li>
                     <li>
-                        <x-home-nav-link>
+                        <x-home-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
                             <x-feathericon-mail class="h-6 w-6" />
                         </x-home-nav-link>
                     </li>

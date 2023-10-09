@@ -14,7 +14,15 @@
                     id="nombre"
                     name="nombre"
                     label="Nombre"
-                    placeholder="Escribe tu nombre aquí"
+                    value="{{ __('website.home.hero.personalname') }}"
+                    placeholder="{{ __('crm.default.nombre') }}"
+                ></x-form.input-text>
+                <x-form.input-text
+                    id="apellido"
+                    name="apellido"
+                    label="Apellido"
+                    value="{{ __('website.home.hero.personalsurname') }}"
+                    placeholder="{{ __('crm.default.apellido') }}"
                 ></x-form.input-text>
             </div>
             <div class="grid grid-cols-2 gap-4 m-4">
@@ -23,7 +31,7 @@
                     label="Texto inicial"
                     placeholder="Escribe un texto"
                     name="herotext"
-                ></x-form.textarea>
+                >{{ __('website.home.hero.text') }}</x-form.textarea>
                 <x-form.input-file
                     id="herosection"
                     label="Imagen hero section"
@@ -51,7 +59,7 @@
         </div>
 
         <div class="flex items-center justify-center m-8">
-            <x-form.submit/>
+            <x-form.submit>{{ __('crm.default.guardar') }}</x-form.submit>
         </div>
     </form>
 @endsection

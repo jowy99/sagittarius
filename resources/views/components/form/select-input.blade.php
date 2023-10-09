@@ -1,5 +1,4 @@
 @props([
-    'label' => null,
     'class' => '',
     'disabled' => false,
     'required' => false,
@@ -8,17 +7,10 @@
 
 <div class="flex flex-col {{ $class }}">
     @php($id = \Illuminate\Support\Str::uuid()->toString())
-    @if($label !== null)
-    <label
-        for="{{ $id }}"
-        class="capitalize block text-sm font-medium leading-6 text-white @if($required) after:content-['*'] after:text-red-500 @endif"
-    >
-        {{ $label }}
-    </label>
-    @endif
+
     <select
         id="{{ $id }}"
-        class="text-carbon-800 block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-carbon-300 placeholder:text-carbon-400 focus:ring-1 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
+        class="flex-1 min-w-0 block drop-shadow-md sm:text-md border-0 ring-1 ring-inset ring-gray-300 w-full py-2 px-6 border-none rounded text-gray-600 bg-gray-100 focus:ring-green-500 focus:ring-2"
         @if($disabled)disabled="disabled" @endif
         @if($required)required="required" @endif
         {{ $attributes }}

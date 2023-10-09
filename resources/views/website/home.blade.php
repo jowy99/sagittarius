@@ -3,12 +3,13 @@
 @section('main')
     <div class="w-full h-screen flex">
         <div class="w-6/12 h-full flex flex-col gap-4 items-center justify-center">
-            <h1 class="uppercase font-serif text-6xl">joël arnaud</h1>
-            <p id="herotext">
-                Soy un joven de 23 años.
+            <h1 class="uppercase font-bold text-green_light-600 text-6xl">{{ __('website.home.hero.personalname') }}</h1>
+            <h1 class="uppercase font-bold text-green_light-600 text-6xl">{{ __('website.home.hero.personalsurname') }}</h1>
+            <p id="herotext" class="text-green-300 text-md">
+                {{ __('website.home.hero.text') }}
             </p>
             <a href="">
-                <x-primary-button>Mis proyectos</x-primary-button>
+                <x-primary-button>{{ __('website.home.hero.projectsbutton') }}</x-primary-button>
             </a>
         </div>
         <div class="w-6/12 h-full bg-zinc-800">
