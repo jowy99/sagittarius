@@ -18,6 +18,8 @@ use App\Http\Controllers\crm\projects\ShowEditProjectsController;
 use App\Http\Controllers\crm\projects\UpdateProjectsController;
 
 use App\Http\Controllers\crm\opinions\EditOpinionsSiteController;
+use App\Http\Controllers\crm\opinions\ExportOpinionsController;
+use App\Http\Controllers\website\opinions\StoreOpinionsController;
 
 Route::get('/', function () {
     return view('website.home');
@@ -26,6 +28,8 @@ Route::get('/', function () {
 Route::get('/opinions', function () {
     return view('website.opinions');
 })->name('opinions');
+
+Route::post('/opinions/store', StoreOpinionsController::class)->name('opinions-store');
 
 Route::get('/contact', function () {
     return view('website.contact');
@@ -57,6 +61,7 @@ Route::middleware('admin')
 
                 // Opinions
                 Route::get('/opinions', EditOpinionsSiteController::class)->name('opinions');
+                Route::get('/opinions/export', ExportOpinionsController::class)->name('opinions-export');
             });
     });
 

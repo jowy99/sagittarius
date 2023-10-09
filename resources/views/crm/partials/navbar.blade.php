@@ -79,6 +79,12 @@
                                     Edit opinions
                                 </x-nav-link>
                             </li>
+                            <li>
+                                <x-nav-link :href="route('crm.opinions-export')" :active="request()->routeIs('crm.opinions-export')">
+                                    <x-bytesize-export class="h-6 w-6" />
+                                    Export opinions
+                                </x-nav-link>
+                            </li>
                         </ul>
                     </li>
                     <li>

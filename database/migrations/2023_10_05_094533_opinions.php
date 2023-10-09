@@ -13,8 +13,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('email');
-            $table->tinyInteger('rate0-5');
-            $table->text('comments');
+            $table->tinyInteger('rate');
+            $table->text('comment');
             $table->timestamps();
         });
     }

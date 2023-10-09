@@ -17,7 +17,8 @@
                     </div>
                     <hr>
                     <div>
-                        <form action="">
+                        <form action="{{ route('opinions-store') }}" method="post">
+                            @csrf
                             <div class="space-y-8">
                                 <div class="grid md:grid-cols-2 gap-4">
                                     <x-form.input-text
@@ -44,6 +45,7 @@
                                         required="true"
                                     ></x-form.input-text>
                                     <x-form.select-input
+                                        name="rate"
                                         required="true"
                                     >
                                         <x-form.select-option
