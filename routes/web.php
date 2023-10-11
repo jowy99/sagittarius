@@ -19,6 +19,9 @@ use App\Http\Controllers\crm\projects\UpdateProjectsController;
 
 use App\Http\Controllers\crm\opinions\EditOpinionsSiteController;
 use App\Http\Controllers\crm\opinions\ExportOpinionsController;
+
+use App\Http\Controllers\website\dev\ShowDevProjectsController;
+
 use App\Http\Controllers\website\opinions\StoreOpinionsController;
 
 use App\Http\Controllers\website\contact\SendContactRequestController;
@@ -26,6 +29,12 @@ use App\Http\Controllers\website\contact\SendContactRequestController;
 Route::get('/', function () {
     return view('website.home');
 })->name('home');
+
+Route::get('/test', function () {
+    return view('website.test');
+})->name('test');
+
+Route::get('/dev', ShowDevProjectsController::class)->name('dev');
 
 Route::get('/opinions', function () {
     return view('website.opinions');
