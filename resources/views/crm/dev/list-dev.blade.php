@@ -41,6 +41,9 @@
                     </tbody>
                     @endforelse
                 </table>
+                <div>
+                    {{ $devs->links('pagination::tailwind') }}
+                </div>
             </div>
         </div>
     </div>

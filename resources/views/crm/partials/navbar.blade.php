@@ -11,7 +11,6 @@
                         <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                             <x-heroicon-o-home class="h-6 w-6" />
                             Home
-                            <span class="ml-auto w-9 min-w-max whitespace-nowrap rounded-full bg-green-600 px-2.5 py-0.5 text-center text-xs font-medium leading-5 text-white ring-1 ring-inset ring-green-500" aria-hidden="true">5</span>
                         </x-nav-link>
                         <ul role="list" class="mt-2 mx-6 space-y-1">
                             <li>
@@ -38,6 +37,9 @@
                                 <x-nav-link :href="route('crm.list-dev')" :active="request()->routeIs('crm.list-dev')">
                                     <x-tabler-list class="h-6 w-6" />
                                     Dev projects list
+                                    <span class="ml-auto w-9 min-w-max whitespace-nowrap rounded-full bg-green-600 px-2.5 py-0.5 text-center text-xs font-medium leading-5 text-white ring-1 ring-inset ring-green-500" aria-hidden="true">
+                                        12
+                                    </span>
                                 </x-nav-link>
                             </li>
                             <hr>
@@ -51,6 +53,7 @@
                                 <x-nav-link :href="route('crm.list-proj')" :active="request()->routeIs('crm.list-proj')">
                                     <x-tabler-list class="h-6 w-6" />
                                     Projects list
+                                    <span class="ml-auto w-9 min-w-max whitespace-nowrap rounded-full bg-green-600 px-2.5 py-0.5 text-center text-xs font-medium leading-5 text-white ring-1 ring-inset ring-green-500" aria-hidden="true">12</span>
                                 </x-nav-link>
                             </li>
 <!--                            <li>-->
@@ -83,15 +86,15 @@
                                 <x-nav-link :href="route('crm.opinions-export')" :active="request()->routeIs('crm.opinions-export')">
                                     <x-bytesize-export class="h-6 w-6" />
                                     Export opinions
+                                    <span class="ml-auto w-9 min-w-max whitespace-nowrap rounded-full bg-green-600 px-2.5 py-0.5 text-center text-xs font-medium leading-5 text-white ring-1 ring-inset ring-green-500" aria-hidden="true">12</span>
                                 </x-nav-link>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <x-nav-link>
+                        <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
                             <x-feathericon-mail class="h-6 w-6" />
                             Contact
-                            <span class="ml-auto w-9 min-w-max whitespace-nowrap rounded-full bg-green-600 px-2.5 py-0.5 text-center text-xs font-medium leading-5 text-white ring-1 ring-inset ring-green-500" aria-hidden="true">12</span>
                         </x-nav-link>
                         <ul role="list" class="mt-2 mx-6 space-y-1">
                             <li>

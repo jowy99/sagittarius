@@ -6,6 +6,7 @@ namespace App\Http\Controllers\crm\dev;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\devs;
+use App\Models\Media;
 use Illuminate\Contracts\View\View;
 
 class ShowEditDevProjectsController extends Controller
