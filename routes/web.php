@@ -30,10 +30,6 @@ Route::get('/', function () {
     return view('website.home');
 })->name('home');
 
-Route::get('/test', function () {
-    return view('website.test');
-})->name('test');
-
 Route::get('/dev', ShowDevProjectsController::class)->name('dev');
 
 Route::get('/opinions', function () {
