@@ -29,8 +29,10 @@
                     </div>
                 </section>
                 <section class="text-right">
-                    <div>
-                        <p>Redes</p>
+                    <div class="my-2 mx-4 flex justify-end">
+                        <a href="{{ $dev->github }}" class="text-green-200 hover:text-white">
+                            <x-bi-github class="w-6 h-6" />
+                        </a>
                     </div>
                 </section>
             </article>

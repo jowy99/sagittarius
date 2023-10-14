@@ -12,6 +12,7 @@ return new class extends Migration
             $table->id()->autoIncrement();
             $table->string('title');
             $table->text('description');
+            $table->string('github');
             $table->timestamps();
         });
     }

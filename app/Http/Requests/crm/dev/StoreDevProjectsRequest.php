@@ -12,6 +12,7 @@ class StoreDevProjectsRequest extends FormRequest
         return [
             'title' => ['nullable'],
             'description' => ['nullable'],
+            'github' => ['nullable'],
             'image' => ['nullable'],
         ];
     }

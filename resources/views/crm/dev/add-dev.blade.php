@@ -10,13 +10,21 @@
 
     <div class="">
         <h2 class="ml-8 text-2xl text-white">Hero section</h2>
-        <div class="grid gap-4 m-4">
+        <div class="grid grid-cols-2 gap-4 m-4">
             <x-form.input-text
                 id="title"
                 type="text"
                 label="Título"
                 name="title"
                 placeholder="Título"
+            ></x-form.input-text>
+            <x-form.input-text
+                id="github"
+                type="text"
+                label="Github"
+                name="github"
+                value="https://github.com/jowy99/"
+                placeholder="Github"
             ></x-form.input-text>
         </div>
         <div class="grid grid-cols-2 gap-4 m-4">

@@ -11,7 +11,8 @@ class UpdateDevProjectsRequest extends FormRequest
     {
         return [
             'title' => ['nullable'],
-            'description' => ['nullable']
+            'description' => ['nullable'],
+            'github' => ['nullable']
         ];
     }
     public function authorize(): bool
