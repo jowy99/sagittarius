@@ -12,13 +12,10 @@
             @forelse($devs as $dev)
             <article class="relative flex flex-col rounded-lg border border-gray-200 bg-green-500 transition-shadow ease-out group divide-y divide-gray-200 hover:shadow-lg">
                 <section class="relative">
-                    <a class="relative" href="">
-                        <img
-                            class="w-full rounded-t-lg object-cover object-center transition-all ease-out aspect-[16/9] group-hover:brightness-75"
-                            src="{{ $dev->getMedia('gallery')->first()->getUrl('web') }}"
-                            alt="{{ $dev->getMedia('gallery')->first()->name }}"
-                        >
-                    </a>
+                    <img
+                        class="w-full rounded-t-lg object-cover object-center transition-all ease-out aspect-[16/9] group-hover:brightness-75"
+                        src="{{ $dev->getFirstMedia('devProjects')->getUrl('web') }}"
+                    >
                 </section>
                 <section class="px-5 py-4 space-y-4">
                     <div class="font-bold text-carbon-800">

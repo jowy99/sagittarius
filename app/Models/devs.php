@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\Image\Manipulations;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class devs extends Model implements HasMedia
 {
@@ -17,8 +15,9 @@ class devs extends Model implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('gallery')
+        $this->addMediaCollection('devProjects')
             ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/webp'])
+            ->singleFile()
             ->registerMediaConversions(function () {
                 $this->addMediaConversion('thumb')
                     // ->format(Manipulations::FORMAT_WEBP)
