@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Models;
 
@@ -11,4 +12,9 @@ class opinions extends Model
     protected $guarded = ['id'];
 
     protected $casts = ['email' => 'encrypted'];
+
+    public function count(): int
+    {
+        return self::query()->count();
+    }
 }

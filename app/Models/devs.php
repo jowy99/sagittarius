@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Models;
 
@@ -12,6 +13,11 @@ class devs extends Model implements HasMedia
     use HasFactory;
     use InteractsWithMedia;
     protected $guarded = ['id'];
+
+    public function count(): int
+    {
+        return self::query()->count();
+    }
 
     public function registerMediaCollections(): void
     {
