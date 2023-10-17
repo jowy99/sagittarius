@@ -12,6 +12,7 @@ class StoreProjectsRequest extends FormRequest
         return [
             'title' => ['nullable'],
             'description' => ['nullable'],
+            'file' => ['nullable'],
         ];
     }
     public function authorize(): bool

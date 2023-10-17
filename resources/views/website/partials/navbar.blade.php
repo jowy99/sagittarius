@@ -15,7 +15,7 @@
                         </x-home-nav-link>
                     </li>
                     <li>
-                        <x-home-nav-link>
+                        <x-home-nav-link :href="route('projects')" :active="request()->routeIs('projects')">
                             <x-heroicon-o-folder class="h-6 w-6" />
                         </x-home-nav-link>
                     </li>

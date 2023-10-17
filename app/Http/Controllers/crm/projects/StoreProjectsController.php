@@ -9,12 +9,20 @@ use App\Models\projects;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
 
 class StoreProjectsController extends Controller
 {
     public function __invoke(StoreProjectsRequest $request): RedirectResponse
     {
         $data = $request->validated();
+
+        if ($request->hasFile('file'))
+        {
+            $file = $request->file->storeAs('', $data['file']->getClientOriginalName(), 'docs');
+            $data['file'] = $file;
+        }
+
         projects::query()->create($data);
 
         return Redirect::route('crm.add-proj');

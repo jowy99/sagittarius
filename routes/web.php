@@ -22,6 +22,9 @@ use App\Http\Controllers\crm\opinions\ExportOpinionsController;
 
 use App\Http\Controllers\website\dev\ShowDevProjectsController;
 
+use App\Http\Controllers\website\projects\ShowProjectsController;
+use App\Http\Controllers\website\projects\DownloadFileController;
+
 use App\Http\Controllers\website\opinions\StoreOpinionsController;
 
 use App\Http\Controllers\website\contact\SendContactRequestController;
@@ -31,6 +34,9 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/dev', ShowDevProjectsController::class)->name('dev');
+
+Route::get('/projects', ShowProjectsController::class)->name('projects');
+Route::get('/projects/download/{file}', DownloadFileController::class)->name('projects-download');
 
 Route::get('/opinions', function () {
     return view('website.opinions');
