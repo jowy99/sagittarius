@@ -27,7 +27,7 @@
                 </section>
                 <section class="text-right">
                     <div class="my-2 mx-4 flex justify-end space-x-6">
-                        <a href="" class="text-green-200 hover:text-white">
+                        <a href="{{ route('projects-view', $proj->file) }}" target="_blank" class="text-green-200 hover:text-white">
                             <x-heroicon-s-eye class="w-6 h-6" />
                         </a>
                         <a href="{{ route('projects-download', $proj->file) }}" class="text-green-200 hover:text-white">
