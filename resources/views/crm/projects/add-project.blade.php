@@ -31,22 +31,12 @@
                 label="File"
             ></x-form.input-file>
         </div>
-        <div class="grid gap-4 m-8">
-            <div class="relative flex gap-x-3">
-                <div class="flex h-6 items-center">
-                    <input
-                        id="download"
-                        name="download[]"
-                        checked
-                        value="1"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-white/10 bg-white/5 text-carbon-600 focus:ring-carbon-600 focus:ring-offset-gray-900">
-                </div>
-                <div class="text-sm leading-6">
-                    <label for="download" class="font-medium text-white">Download</label>
-                </div>
-            </div>
-
+        <div class="grid gap-4 m-4">
+            <x-form.input-file
+                id="image"
+                name="image"
+                label="Imagen"
+            ></x-form.input-file>
         </div>
     </div>
 

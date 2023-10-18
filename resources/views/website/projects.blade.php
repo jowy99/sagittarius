@@ -14,7 +14,7 @@
                 <section class="relative">
                     <img
                         class="w-full rounded-t-lg object-cover object-center transition-all ease-out aspect-[16/9] group-hover:brightness-75"
-                        src="https://i2.wp.com/ortodontiadescomplicada.com.br/wp-content/uploads/2016/10/img-300x300.png?fit=300%2C300"
+                        src="{{ $proj->getFirstMedia('Projects')->getUrl('web') }}"
                     >
                 </section>
                 <section class="px-5 py-4 space-y-4">

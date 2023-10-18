@@ -60,7 +60,6 @@
             </div>
             @endif
         </div>
-        @include('website.partials.navbar')
         <main class="min-h-screen flex flex-col relative dark:text-white z-0">
             @yield('main')
         </main>

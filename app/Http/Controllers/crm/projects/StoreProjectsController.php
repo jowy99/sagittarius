@@ -23,7 +23,12 @@ class StoreProjectsController extends Controller
             $data['file'] = $file;
         }
 
-        projects::query()->create($data);
+        $proj = projects::query()->create($data);
+
+        $proj->addMediaFromRequest('image')
+            ->withResponsiveImages()
+            ->usingName($proj->title)
+            ->toMediaCollection('Projects');
 
         return Redirect::route('crm.add-proj');
     }
