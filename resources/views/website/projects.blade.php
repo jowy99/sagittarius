@@ -30,9 +30,11 @@
                         <a href="{{ route('projects-view', $proj->file) }}" target="_blank" class="text-green-200 hover:text-white">
                             <x-heroicon-s-eye class="w-6 h-6" />
                         </a>
+                        @if($proj->download == 1)
                         <a href="{{ route('projects-download', $proj->file) }}" class="text-green-200 hover:text-white">
                             <x-feathericon-download class="w-6 h-6" />
                         </a>
+                        @endif
                     </div>
                 </section>
             </article>

@@ -10,6 +10,9 @@ class projects extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+    protected $casts = [
+        'download' => 'boolean',
+    ];
 
     public function count(): int
     {

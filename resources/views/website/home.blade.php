@@ -18,19 +18,14 @@
     </div>
     <div class="w-full h-screen flex">
         <div class="w-6/12 h-full flex flex-col gap-4 items-center justify-center">
-            <div class="text-xl hover:text-2xl -rotate-90">
-                <p>
-                    Mis proyectos
-                </p>
-                <p>
-                    como desarrollador web.
-                </p>
-            </div>
+            <a href="{{ route('dev') }}" class="w-full h-full">
+                <img src="{{ asset('storage/Home/devprojects.jpg') }}" alt="" class="object-fill">
+            </a>
         </div>
         <div class="w-6/12 h-full flex flex-col gap-4 items-center justify-center">
-            <p>
-                Mis otros proyectos.
-            </p>
+            <a href="{{ route('projects') }}" class="w-full h-full">
+                <img src="{{ asset('storage/Home/projects.png') }}" alt="" class="object-fill">
+            </a>
         </div>
     </div>
 @endsection

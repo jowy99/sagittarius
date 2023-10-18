@@ -13,6 +13,7 @@ class StoreProjectsRequest extends FormRequest
             'title' => ['nullable'],
             'description' => ['nullable'],
             'file' => ['nullable'],
+            'download' => ['required', 'boolean'],
         ];
     }
     public function authorize(): bool
