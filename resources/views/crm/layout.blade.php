@@ -16,15 +16,11 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body>
-        <div class="min-h-screen flex">
+    <body class="dark:bg-zinc-800">
+        <div class="min-h-screen sm:flex">
             @include('crm.partials.navbar')
-            <main class="w-10/12 flex flex-col relative dark:bg-zinc-800 z-0">
-                <div class="flex items-center justify-center">
-                    <div class="m-4 w-8/12 h-8/12 rounded-lg bg-green-500 place-self-center">
-                        @yield('main')
-                    </div>
-                </div>
+            <main class="w-full lg:w-10/12 min-h-screen flex flex-col relative dark:text-white z-0">
+                @yield('main')
             </main>
         </div>
         @include('website.partials.footer')
