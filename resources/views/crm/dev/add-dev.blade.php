@@ -36,7 +36,6 @@
                         <x-form.input-file
                             id="image"
                             name="image"
-                            label="Imagen"
                         ></x-form.input-file>
                     </div>
                 </div>

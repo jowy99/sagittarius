@@ -34,7 +34,7 @@
                 </tr>
                 @empty
                 <tr>
-                    <td class="px-6 py-4 whitespace-nowrap">
+                    <td class="px-6 py-4 whitespace-nowrap bg-gray-100 text-green-400 font-semibold" colspan="4">
                         {{ __('Tabla vacía') }}
                     </td>
                 </tr>
