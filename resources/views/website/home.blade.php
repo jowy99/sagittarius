@@ -57,11 +57,10 @@
                 </div>
             </div>
         </div>
-
-
-        <!-- End Project Cards -->
-
     </div>
+
+    <!-- End Project Cards -->
+
 
     <!-- Section 2 - Contact -->
 
@@ -126,7 +125,8 @@
                 </div>
             </div>
         </div>
-        <!-- End Contact Form -->
     </div>
+
+    <!-- End Contact Form -->
 
 @endsection
