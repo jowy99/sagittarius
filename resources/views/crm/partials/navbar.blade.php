@@ -1,4 +1,4 @@
-<div class="hidden md:flex h-screen grow flex-col gap-y-5 overflow-y-auto bg-green-600 px-6 z-10">
+<div class="hidden md:flex h-screen grow flex-col gap-y-5 overflow-y-auto bg-green-700 dark:bg-green-800 px-6 z-10">
     <div class="flex h-16 shrink-0 items-center">
         <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=white" alt="Your Company">
     </div>
@@ -140,7 +140,7 @@
     <div class="flex items-center ml-6">
         <x-dropdown align="right" width="48">
             <x-slot name="trigger">
-                <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-green-500 hover:text-green-700 dark:hover:text-green-300 focus:outline-none transition ease-in-out duration-150">
+                <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-green_light-500 hover:text-green-700 dark:hover:text-green-300 focus:outline-none transition ease-in-out duration-150">
                     <x-radix-hamburger-menu class="w-6 h-6" />
                 </button>
             </x-slot>

@@ -7,7 +7,7 @@
             <h1 class="capitalize font-bold text-green-400 dark:text-green_light-600 text-4xl text-center md:text-6xl">list projects</h1>
             <hr class="h-1 w-20 mx-auto my-4 bg-green-500 border-0">
             <table class="min-w-full divide-y divide-carbon-300 border border-carbon-600 p-4 md:p-0">
-                <thead class="bg-green-600">
+                <thead class="bg-green_light-800">
                 <tr>
                     <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm uppercase font-bold text-green_light-200 sm:pl-6 lg:pl-8">Title</th>
                     <th scope="col" class="px-3 py-3.5 text-left text-sm uppercase font-bold text-green_light-200">Description</th>
@@ -16,11 +16,11 @@
                 </tr>
                 </thead>
                 @forelse ($projs as $proj)
-                <tbody class="divide-y divide-carbon-200 bg-green_light-600 dark:bg-green_light-700">
+                <tbody class="divide-y divide-carbon-200 bg-gray-100">
                 <tr>
-                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-light-400 font-semibold sm:pl-6 lg:pl-8">{{ $proj->title }}</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-light-200">{{ $proj->description }}</td>
-                    <td class="hidden md:block whitespace-nowrap px-3 py-4 text-sm text-light-200">{{ $proj->file }}</td>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm text-green-400 font-semibold sm:pl-6 lg:pl-8">{{ $proj->title }}</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-green-300">{{ $proj->description }}</td>
+                    <td class="hidden md:block whitespace-nowrap px-3 py-4 text-sm text-green-300">{{ $proj->file }}</td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm">
                         <div class="space-x-8 flex">
                             <a href="{{ route('crm.delete-proj', $proj->id) }}">
