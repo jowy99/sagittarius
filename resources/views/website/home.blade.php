@@ -22,7 +22,7 @@
 
     <!-- Section 1 - Projects -->
 
-    <div class="w-full min-h-screen space-y-8 md:mt-24">
+    <div class="w-full min-h-screen space-y-12 p-4 md:mt-24 md:px-52">
         <div class="flex-col space-y-4 h-1/4 w-full">
             <h1 class="font-bold text-green_light-600 text-4xl text-center md:text-6xl">Mis proyectos</h1>
             <hr class="h-1 w-20 mx-auto my-4 bg-green-500 border-0">
@@ -30,13 +30,13 @@
 
         <!-- Project Cards -->
 
-        <div class="grid gap-12 justify-center items-center md:grid-cols-2 h-3/4 w-full md:h-full">
+        <div class="grid gap-12 justify-center items-center sm:grid-cols-1 md:grid-cols-2 h-3/4 w-full md:h-full md:pt-20">
             <!-- Dev Projects Card -->
             <div class="w-full h-full bg-white border border-green-200 rounded-lg shadow dark:bg-green-800 dark:border-green-700 md:flex">
-                <a href="#">
+                <a href="#" class="md:w-1/2 md:h-full">
                     <img class="rounded-t-lg" src="{{ asset('storage/Home/devprojects.jpg') }}" alt="" />
                 </a>
-                <div class="p-5">
+                <div class="p-5 md:w-1/2 md:h-full">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-green-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
                     </a>
@@ -46,10 +46,10 @@
 
             <!-- Projects Card -->
             <div class="w-full h-full bg-white border border-green-200 rounded-lg shadow dark:bg-green-800 dark:border-green-700 md:flex">
-                <a href="#">
+                <a href="#" class="md:w-1/2 md:h-full">
                     <img class="rounded-t-lg" src="{{ asset('storage/Home/projects.png') }}" alt="" />
                 </a>
-                <div class="p-5">
+                <div class="p-5 md:w-1/2 md:h-full">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-green-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
                     </a>
@@ -65,14 +65,14 @@
 
     <!-- Section 2 - Contact -->
 
-    <div class="min-h-screen w-full mt-12 space-y-8">
+    <div class="min-h-screen w-full mt-12 space-y-12">
         <div class="flex-col space-y-4 h-1/4 w-full">
             <h1 class="font-bold text-green_light-600 text-4xl text-center md:text-6xl">Contacto</h1>
             <hr class="h-1 w-20 mx-auto my-4 bg-green-500 border-0">
         </div>
 
         <!-- Contact Form -->
-        <div class="md:flex md:items-center md:justify-center md:mt-8">
+        <div class="p-2 md:flex md:items-center md:justify-center md:mt-8">
             <div class="w-full h-full rounded-lg py-8 dark:bg-green-800 dark:border-green-700 md:w-9/12 md:h-9/12 md:rounded-lg md:p-12">
                 <div class="lg:flex lg:space-x-8">
                     <div class="hidden lg:block lg:w-5/12 lg:h-full">

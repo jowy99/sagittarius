@@ -22,10 +22,10 @@
     <body class="font-sans antialiased dark:bg-zinc-800">
         <div>
             @if (Route::has('login'))
-            <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+            <div class="sm:fixed sm:top-0 left-0 sm:right-0 p-6 text-right z-10">
                 @auth
-                <div class="hidden sm:flex sm:items-center sm:ml-6">
-                    <x-dropdown align="right" width="48">
+                <div class="flex sm:items-center sm:ml-6">
+                    <x-dropdown align="left" width="48">
                         <x-slot name="trigger">
                             <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-green-500 hover:text-green-700 dark:hover:text-green-300 focus:outline-none transition ease-in-out duration-150">
                                 <div>{{ Auth::user()->name }}</div>
@@ -60,6 +60,7 @@
             </div>
             @endif
         </div>
+        @include('website.partials.navbar')
         <main class="min-h-screen flex flex-col relative dark:text-white z-0">
             @yield('main')
         </main>
