@@ -2,49 +2,50 @@
 
 @section('main')
 
-<div class="w-full h-full md:w-9/12 md:h-9/12 md:rounded-lg md:p-12">
-    <div class="my-4 space-y-4">
-        <x-h1>Projects</x-h1>
-        <x-p>Mis proyectos</x-p>
+<div class="w-full min-h-screen space-y-12 p-4 lg:mt-24 lg:px-52">
+    <div class="flex-col space-y-4 h-1/4 w-full">
+        <h1 class="capitalize font-bold text-green-400 dark:text-green_light-600 text-4xl text-center lg:text-6xl">otros proyectos</h1>
+        <p class="text-md text-green-300">bkjnds</p>
+    </div>
+
+    <!-- Project Cards -->
+
+    <div class="grid gap-12 justify-center items-center lg:grid-cols-3 h-3/4 w-full lg:h-full lg:pt-20">
+        @forelse($projs as $proj)
+        <article class="relative flex flex-col rounded-lg border border-gray-200 bg-green-500 transition-shadow ease-out group divide-y divide-gray-200 hover:shadow-lg">
+            <section class="relative">
+                <img
+                    class="w-full rounded-t-lg object-cover object-center transition-all ease-out aspect-[16/9] group-hover:brightness-75"
+                    src="{{ $proj->getFirstMedia('Projects')->getUrl('web') }}"
+                >
+            </section>
+            <section class="px-5 py-4 space-y-4">
+                <div class="font-bold text-carbon-800">
+                    {{ $proj->title }}
+                </div>
+                <div class="text-carbon-800">
+                    {{ $proj->description }}
+                </div>
+            </section>
+            <section class="text-right">
+                <div class="my-2 mx-4 flex justify-end space-x-6">
+                    <a href="{{ route('projects-view', $proj->file) }}" target="_blank" class="text-green-200 hover:text-white">
+                        <x-heroicon-s-eye class="w-6 h-6" />
+                    </a>
+                    @if($proj->download == 1)
+                    <a href="{{ route('projects-download', $proj->file) }}" class="text-green-200 hover:text-white">
+                        <x-feathericon-download class="w-6 h-6" />
+                    </a>
+                    @endif
+                </div>
+            </section>
+        </article>
+        @empty
+        <p>Vacío</p>
+        @endforelse
     </div>
     <div>
-        <div class="grid md:grid-cols-3 gap-4">
-            @forelse($projs as $proj)
-            <article class="relative flex flex-col rounded-lg border border-gray-200 bg-green-500 transition-shadow ease-out group divide-y divide-gray-200 hover:shadow-lg">
-                <section class="relative">
-                    <img
-                        class="w-full rounded-t-lg object-cover object-center transition-all ease-out aspect-[16/9] group-hover:brightness-75"
-                        src="{{ $proj->getFirstMedia('Projects')->getUrl('web') }}"
-                    >
-                </section>
-                <section class="px-5 py-4 space-y-4">
-                    <div class="font-bold text-carbon-800">
-                        {{ $proj->title }}
-                    </div>
-                    <div class="text-carbon-800">
-                        {{ $proj->description }}
-                    </div>
-                </section>
-                <section class="text-right">
-                    <div class="my-2 mx-4 flex justify-end space-x-6">
-                        <a href="{{ route('projects-view', $proj->file) }}" target="_blank" class="text-green-200 hover:text-white">
-                            <x-heroicon-s-eye class="w-6 h-6" />
-                        </a>
-                        @if($proj->download == 1)
-                        <a href="{{ route('projects-download', $proj->file) }}" class="text-green-200 hover:text-white">
-                            <x-feathericon-download class="w-6 h-6" />
-                        </a>
-                        @endif
-                    </div>
-                </section>
-            </article>
-            @empty
-            <p>Vacío</p>
-            @endforelse
-        </div>
-        <div>
-            {{ $projs->links('pagination::tailwind') }}
-        </div>
+        {{ $projs->links('pagination::tailwind') }}
     </div>
 </div>
 
