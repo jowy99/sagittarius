@@ -20,6 +20,11 @@
                         </x-home-nav-link>
                     </li>
                     <li>
+                        <x-home-nav-link :href="route('aboutme')" :active="request()->routeIs('aboutme')">
+                            <x-radix-person class="w-6 h-6" />
+                        </x-home-nav-link>
+                    </li>
+                    <li>
                         <x-home-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
                             <x-feathericon-mail class="h-6 w-6" />
                         </x-home-nav-link>
@@ -42,11 +47,11 @@
 
 <!-- Responsive -->
 
-<div class="sm:hidden fixed top-0 right-0 sm:left-0 p-6 text-right z-10 md:w-32 flex md:grow md:flex-col md:gap-y-5 md:overflow-y-auto md:bg-green-600 md:rounded-xl md:px-6 md:py-6 md:fixed md:top-1/2 md:right-8 md:transform md:-translate-y-1/2">
+<div class="sm:hidden fixed top-0 right-0 sm:left-0 p-6 text-right z-10 md:w-32 flex md:grow md:flex-col md:gap-y-5 md:bg-green-600 md:rounded-xl md:px-6 md:py-6 md:fixed md:top-1/2 md:right-8 md:transform md:-translate-y-1/2">
     <div class="flex items-center ml-6">
         <x-dropdown align="right" width="48">
             <x-slot name="trigger">
-                <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-green-500 hover:text-green-700 dark:hover:text-green-300 focus:outline-none transition ease-in-out duration-150">
+                <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-green-500 hover:text-green-400 dark:hover:text-green-300 focus:outline-none transition ease-in-out duration-150">
                     <x-radix-hamburger-menu class="w-6 h-6" />
                 </button>
             </x-slot>
@@ -62,6 +67,10 @@
 
                 <x-home-nav-link :href="route('projects')" :active="request()->routeIs('projects')">
                     <x-heroicon-o-folder class="h-6 w-6" />
+                </x-home-nav-link>
+
+                <x-home-nav-link :href="route('aboutme')" :active="request()->routeIs('aboutme')">
+                    <x-radix-person class="w-6 h-6" />
                 </x-home-nav-link>
 
                 <x-home-nav-link :href="route('contact')" :active="request()->routeIs('contact')">

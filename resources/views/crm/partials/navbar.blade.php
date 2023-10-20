@@ -85,6 +85,23 @@
                     <hr>
 
                     <li>
+                        <x-nav-link>
+                            <x-radix-person class="w-6 h-6" />
+                            About me
+                        </x-nav-link>
+                        <ul role="list" class="mt-2 mx-6 space-y-1">
+                            <li>
+                                <x-nav-link :href="route('crm.edit-abtme')" :active="request()->routeIs('crm.edit-abtme')">
+                                    <x-feathericon-edit class="h-6 w-6" />
+                                    Edit about me
+                                </x-nav-link>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <hr>
+
+                    <li>
                         <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
                             <x-feathericon-mail class="h-6 w-6" />
                             Contact
@@ -136,128 +153,155 @@
 
 <!-- Responsive -->
 
-<div class="sm:hidden fixed top-0 right-0 sm:left-0 p-6 text-right z-10 md:w-32 flex md:grow md:flex-col md:gap-y-5 md:overflow-y-auto md:bg-green-600 md:rounded-xl md:px-6 md:py-6 md:fixed md:top-1/2 md:right-8 md:transform md:-translate-y-1/2">
+<div class="sm:hidden fixed top-0 right-0 sm:left-0 p-6 text-right z-10 md:w-32 flex md:grow md:flex-col md:gap-y-5 md:bg-green-600 md:rounded-xl md:px-6 md:py-6 md:fixed md:top-1/2 md:right-8 md:transform md:-translate-y-1/2">
     <div class="flex items-center ml-6">
-        <x-dropdown align="right" width="48">
+        <x-dropdown align="right">
             <x-slot name="trigger">
-                <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-green_light-500 hover:text-green-700 dark:hover:text-green-300 focus:outline-none transition ease-in-out duration-150">
+                <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-green_light-500 hover:text-green-400 dark:hover:text-green-300 focus:outline-none transition ease-in-out duration-150">
                     <x-radix-hamburger-menu class="w-6 h-6" />
                 </button>
             </x-slot>
 
             <x-slot name="content">
-                <div class="mx-2 space-y-2">
-                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
-                        <x-heroicon-o-home class="h-6 w-6" />
-                        Home
-                    </x-nav-link>
-                    <ul role="list" class="mt-2 mx-6 space-y-1">
-                        <li>
-                            <x-nav-link :href="route('crm.crm')" :active="request()->routeIs('crm.crm')">
-                                <x-feathericon-edit class="h-6 w-6" />
-                                Edit
-                            </x-nav-link>
-                        </li>
-                    </ul>
+                <div class="max-h-80 relative overflow-y-auto scroll-smooth">
+                    <div class="flex flex-col">
+                        <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                            <x-heroicon-o-home class="h-6 w-6" />
+                            Home
+                        </x-nav-link>
+                        <ul role="list" class="mt-2 mx-6 space-y-1">
+                            <li>
+                                <x-nav-link :href="route('crm.crm')" :active="request()->routeIs('crm.crm')">
+                                    <x-feathericon-edit class="h-6 w-6" />
+                                    Edit
+                                </x-nav-link>
+                            </li>
+                        </ul>
+                    </div>
 
                     <hr>
 
-                    <x-nav-link :href="route('dev')" :active="request()->routeIs('dev')">
-                        <x-heroicon-o-folder class="h-6 w-6" />
-                        Dev projects
-                    </x-nav-link>
-                    <ul role="list" class="mt-2 mx-6 space-y-1">
-                        <li>
-                            <x-nav-link :href="route('crm.add-dev')" :active="request()->routeIs('crm.add-dev')">
-                                <x-ri-add-fill class="h-6 w-6" />
-                                Add
-                            </x-nav-link>
-                        </li>
-                        <li>
-                            <x-nav-link :href="route('crm.list-dev')" :active="request()->routeIs('crm.list-dev')">
-                                <x-tabler-list class="h-6 w-6" />
-                                List
-                                <span class="ml-auto w-9 min-w-max whitespace-nowrap rounded-full bg-green-600 px-2.5 py-0.5 text-center text-xs font-medium leading-5 text-white ring-1 ring-inset ring-green-500" aria-hidden="true">
-                                        @php
-                                            $devModel = resolve(\App\Models\devs::class);
-                                            $devCount = $devModel->count();
-                                        @endphp
-                                        {{ $devCount }}
-                                    </span>
-                            </x-nav-link>
-                        </li>
-                    </ul>
+                    <div class="flex flex-col">
+                        <x-nav-link :href="route('dev')" :active="request()->routeIs('dev')">
+                            <x-heroicon-o-folder class="h-6 w-6" />
+                            Dev projects
+                        </x-nav-link>
+                        <ul role="list" class="mt-2 mx-6 space-y-1">
+                            <li>
+                                <x-nav-link :href="route('crm.add-dev')" :active="request()->routeIs('crm.add-dev')">
+                                    <x-ri-add-fill class="h-6 w-6" />
+                                    Add
+                                </x-nav-link>
+                            </li>
+                            <li>
+                                <x-nav-link :href="route('crm.list-dev')" :active="request()->routeIs('crm.list-dev')">
+                                    <x-tabler-list class="h-6 w-6" />
+                                    List
+                                    <span class="ml-auto w-9 min-w-max whitespace-nowrap rounded-full bg-green-600 px-2.5 py-0.5 text-center text-xs font-medium leading-5 text-white ring-1 ring-inset ring-green-500" aria-hidden="true">
+                                    @php
+                                        $devModel = resolve(\App\Models\devs::class);
+                                        $devCount = $devModel->count();
+                                    @endphp
+                                    {{ $devCount }}
+                                </span>
+                                </x-nav-link>
+                            </li>
+                        </ul>
+                    </div>
 
                     <hr>
 
-                    <x-nav-link :href="route('projects')" :active="request()->routeIs('projects')">
-                        <x-heroicon-o-folder class="h-6 w-6" />
-                        Projects
-                    </x-nav-link>
-                    <ul role="list" class="mt-2 mx-6 space-y-1">
-                        <li>
-                            <x-nav-link :href="route('crm.add-proj')" :active="request()->routeIs('crm.add-proj')">
-                                <x-ri-add-fill class="h-6 w-6" />
-                                Add
-                            </x-nav-link>
-                        </li>
-                        <li>
-                            <x-nav-link :href="route('crm.list-proj')" :active="request()->routeIs('crm.list-proj')">
-                                <x-tabler-list class="h-6 w-6" />
-                                List
-                                <span class="ml-auto w-9 min-w-max whitespace-nowrap rounded-full bg-green-600 px-2.5 py-0.5 text-center text-xs font-medium leading-5 text-white ring-1 ring-inset ring-green-500" aria-hidden="true">
-                                        @php
-                                            $projModel = resolve(\App\Models\projects::class);
-                                            $projCount = $projModel->count();
-                                        @endphp
-                                        {{ $projCount }}
-                                    </span>
-                            </x-nav-link>
-                        </li>
-                    </ul>
+                    <div class="flex flex-col">
+                        <x-nav-link :href="route('projects')" :active="request()->routeIs('projects')">
+                            <x-heroicon-o-folder class="h-6 w-6" />
+                            Projects
+                        </x-nav-link>
+                        <ul role="list" class="mt-2 mx-6 space-y-1">
+                            <li>
+                                <x-nav-link :href="route('crm.add-proj')" :active="request()->routeIs('crm.add-proj')">
+                                    <x-ri-add-fill class="h-6 w-6" />
+                                    Add
+                                </x-nav-link>
+                            </li>
+                            <li>
+                                <x-nav-link :href="route('crm.list-proj')" :active="request()->routeIs('crm.list-proj')">
+                                    <x-tabler-list class="h-6 w-6" />
+                                    List
+                                    <span class="ml-auto w-9 min-w-max whitespace-nowrap rounded-full bg-green-600 px-2.5 py-0.5 text-center text-xs font-medium leading-5 text-white ring-1 ring-inset ring-green-500" aria-hidden="true">
+                                    @php
+                                        $projModel = resolve(\App\Models\projects::class);
+                                        $projCount = $projModel->count();
+                                    @endphp
+                                    {{ $projCount }}
+                                </span>
+                                </x-nav-link>
+                            </li>
+                        </ul>
+                    </div>
 
                     <hr>
 
-                    <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
-                        <x-feathericon-mail class="h-6 w-6" />
-                        Contact
-                    </x-nav-link>
-                    <ul role="list" class="mt-2 mx-6 space-y-1">
-                        <li>
-                            <x-nav-link>
-                                <x-feathericon-edit class="h-6 w-6" />
-                                Edit
-                            </x-nav-link>
-                        </li>
-                    </ul>
+                    <div class="flex flex-col">
+                        <x-nav-link :href="route('aboutme')" :active="request()->routeIs('aboutme')">
+                            <x-radix-person class="w-6 h-6" />
+                            About me
+                        </x-nav-link>
+                        <ul role="list" class="mt-2 mx-6 space-y-1">
+                            <li>
+                                <x-nav-link :href="route('crm.edit-abtme')" :active="request()->routeIs('crm.edit-abtme')">
+                                    <x-feathericon-edit class="h-6 w-6" />
+                                    Edit
+                                </x-nav-link>
+                            </li>
+                        </ul>
+                    </div>
 
                     <hr>
 
-                    <x-nav-link :href="route('opinions')" :active="request()->routeIs('opinions')">
-                        <x-far-comment class="w-6 h-6" />
-                        Opinions
-                    </x-nav-link>
-                    <ul role="list" class="mt-2 mx-6 space-y-1">
-                        <li>
-                            <x-nav-link :href="route('crm.opinions')" :active="request()->routeIs('crm.opinions')">
-                                <x-feathericon-edit class="h-6 w-6" />
-                                Edit
-                            </x-nav-link>
-                        </li>
-                        <li>
-                            <x-nav-link :href="route('crm.opinions-export')" :active="request()->routeIs('crm.opinions-export')">
-                                <x-bytesize-export class="h-6 w-6" />
-                                Export
-                                <span class="ml-auto w-9 min-w-max whitespace-nowrap rounded-full bg-green-600 px-2.5 py-0.5 text-center text-xs font-medium leading-5 text-white ring-1 ring-inset ring-green-500" aria-hidden="true">
-                                        @php
-                                            $opModel = resolve(\App\Models\opinions::class);
-                                            $opCount = $opModel->count();
-                                        @endphp
-                                        {{ $opCount }}
-                                    </span>
-                            </x-nav-link>
-                        </li>
-                    </ul>
+                    <div class="flex flex-col">
+                        <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+                            <x-feathericon-mail class="h-6 w-6" />
+                            Contact
+                        </x-nav-link>
+                        <ul role="list" class="mt-2 mx-6 space-y-1">
+                            <li>
+                                <x-nav-link>
+                                    <x-feathericon-edit class="h-6 w-6" />
+                                    Edit
+                                </x-nav-link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <hr>
+
+                    <div class="flex flex-col">
+                        <x-nav-link :href="route('opinions')" :active="request()->routeIs('opinions')">
+                            <x-far-comment class="w-6 h-6" />
+                            Opinions
+                        </x-nav-link>
+                        <ul role="list" class="mt-2 mx-6 space-y-1">
+                            <li>
+                                <x-nav-link :href="route('crm.opinions')" :active="request()->routeIs('crm.opinions')">
+                                    <x-feathericon-edit class="h-6 w-6" />
+                                    Edit
+                                </x-nav-link>
+                            </li>
+                            <li>
+                                <x-nav-link :href="route('crm.opinions-export')" :active="request()->routeIs('crm.opinions-export')">
+                                    <x-bytesize-export class="h-6 w-6" />
+                                    Export
+                                    <span class="ml-auto w-9 min-w-max whitespace-nowrap rounded-full bg-green-600 px-2.5 py-0.5 text-center text-xs font-medium leading-5 text-white ring-1 ring-inset ring-green-500" aria-hidden="true">
+                                    @php
+                                        $opModel = resolve(\App\Models\opinions::class);
+                                        $opCount = $opModel->count();
+                                    @endphp
+                                    {{ $opCount }}
+                                </span>
+                                </x-nav-link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </x-slot>
         </x-dropdown>
