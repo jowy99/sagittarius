@@ -19,7 +19,27 @@
                         <x-p>Si tienes alguna pregunta, colaboración o simplemente quieres saludar, no dudes en ponerte en contacto conmigo. Estaré encantado/a de escucharte y responder lo antes posible.</x-p>
                     </div>
                     <hr class="mt-8 mb-4">
-                    <div></div>
+                    <div class="flex flex-col">
+                        <div>
+                            <h2>Aptitudes para el desarrollo</h2>
+                            <p></p>
+                        </div>
+                        <hr>
+                        <div>
+                            <h2>Idiomas</h2>
+                            <p></p>
+                        </div>
+                        <hr>
+                        <div>
+                            <h2>Otras aptitudes</h2>
+                            <p></p>
+                        </div>
+                        <hr>
+                        <div>
+                            <h2>Extras</h2>
+                            <p></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
