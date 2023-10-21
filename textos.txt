@@ -1,0 +1,40 @@
+###Portada###
+
+1. Esta página web utiliza PHP Laravel 10 y TailwindCSS para ofrecer una experiencia amigable a los usuarios y un
+completo panel de administración. Los administradores pueden agregar, eliminar, y gestionar proyectos, además de
+personalizar la plataforma según sus necesidades.
+
+
+###Proyectos###
+
+#Developer#
+
+- En esta sección, te invito a explorar una variedad de proyectos de desarrollo que reflejan mi experiencia y pasión
+por la creación de soluciones tecnológicas. Cada proyecto es una muestra de habilidades y conocimientos específicos
+en diversas áreas de la programación y el diseño web. Desde juegos interactivos hasta aplicaciones empresariales,
+estos proyectos son el resultado de un compromiso constante con la excelencia en el desarrollo de software. Sumérgete
+en esta colección diversa para conocer más sobre mi trabajo y enfoque en el mundo del desarrollo.
+
+#Otros Proyectos#
+
+- En esta sección, te invito a adentrarte en un mundo de creatividad y diseño. Aquí, presento una colección
+de proyectos que reflejan mi pasión por la estética y el arte visual. Cada proyecto, realizado con aplicaciones
+de diseño como Photoshop y otras herramientas, es un testimonio de mi habilidad para dar vida a ideas y conceptos a
+través de imágenes y elementos visuales. Desde ilustraciones impresionantes hasta diseños gráficos impactantes,
+estos proyectos son una manifestación de mi compromiso con la excelencia en el diseño. Sumérgete en esta diversidad
+de proyectos para explorar mi enfoque en el mundo del diseño y descubrir el poder de la creatividad en acción.
+
+
+###Sobre mi###
+
+#Intro#
+
+- Soy un joven apasionado por el aprendizaje constante, con un enfoque destacado en el desarrollo backend y frontend.
+Mi mayor fortaleza reside en mi capacidad para absorber nuevos conocimientos, mi habilidad para comprender
+conceptos complejos y mi disposición para aceptar desafíos. A través de mi carrera, he cultivado una profunda
+pasión por la creación de experiencias digitales excepcionales y estoy ansioso por seguir creciendo y contribuyendo
+al mundo del desarrollo web.
+
+#Aptitudes desarrollo#
+
+-
