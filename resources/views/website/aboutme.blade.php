@@ -21,22 +21,22 @@
                     <hr class="mt-8 mb-4">
                     <div class="flex flex-col">
                         <div>
-                            <h2>Aptitudes para el desarrollo</h2>
+                            <h2 class="capitalize ml-4 font-bold text-green-400 dark:text-green_light-600 text-2xl md:text-4xl">Aptitudes para el desarrollo</h2>
                             <p></p>
                         </div>
                         <hr>
                         <div>
-                            <h2>Idiomas</h2>
+                            <h2 class="capitalize ml-4 font-bold text-green-400 dark:text-green_light-600 text-2xl md:text-4xl">Idiomas</h2>
                             <p></p>
                         </div>
                         <hr>
                         <div>
-                            <h2>Otras aptitudes</h2>
+                            <h2 class="capitalize ml-4 font-bold text-green-400 dark:text-green_light-600 text-2xl md:text-4xl">Otras aptitudes</h2>
                             <p></p>
                         </div>
                         <hr>
                         <div>
-                            <h2>Extras</h2>
+                            <h2 class="capitalize ml-4 font-bold text-green-400 dark:text-green_light-600 text-2xl md:text-4xl">Extras</h2>
                             <p></p>
                         </div>
                     </div>
