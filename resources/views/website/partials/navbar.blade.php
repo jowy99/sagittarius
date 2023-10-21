@@ -5,32 +5,32 @@
                 <ul role="list" class="-mx-2 space-y-1">
                     <li>
                         <!-- Current: "bg-green-700 text-white", Default: "text-green-200 hover:text-white hover:bg-green-700" -->
-                        <x-home-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                        <x-home-nav-link :href="route('web.home')" :active="request()->routeIs('web.home')">
                             <x-heroicon-o-home class="h-6 w-6" />
                         </x-home-nav-link>
                     </li>
                     <li>
-                        <x-home-nav-link :href="route('dev')" :active="request()->routeIs('dev')">
+                        <x-home-nav-link :href="route('web.dev')" :active="request()->routeIs('web.dev')">
                             <x-heroicon-o-folder class="h-6 w-6" />
                         </x-home-nav-link>
                     </li>
                     <li>
-                        <x-home-nav-link :href="route('projects')" :active="request()->routeIs('projects')">
+                        <x-home-nav-link :href="route('web.projects')" :active="request()->routeIs('web.projects')">
                             <x-heroicon-o-folder class="h-6 w-6" />
                         </x-home-nav-link>
                     </li>
                     <li>
-                        <x-home-nav-link :href="route('aboutme')" :active="request()->routeIs('aboutme')">
+                        <x-home-nav-link :href="route('web.aboutme')" :active="request()->routeIs('web.aboutme')">
                             <x-radix-person class="w-6 h-6" />
                         </x-home-nav-link>
                     </li>
                     <li>
-                        <x-home-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+                        <x-home-nav-link :href="route('web.contact')" :active="request()->routeIs('web.contact')">
                             <x-feathericon-mail class="h-6 w-6" />
                         </x-home-nav-link>
                     </li>
                     <li>
-                        <x-home-nav-link :href="route('opinions')" :active="request()->routeIs('opinions')">
+                        <x-home-nav-link :href="route('web.opinions')" :active="request()->routeIs('web.opinions')">
                             <x-far-comment class="h-6 w-6" />
                         </x-home-nav-link>
                     </li>
@@ -57,27 +57,27 @@
             </x-slot>
 
             <x-slot name="content">
-                <x-home-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                <x-home-nav-link :href="route('web.home')" :active="request()->routeIs('web.home')">
                     <x-heroicon-o-home class="h-6 w-6" />
                 </x-home-nav-link>
 
-                <x-home-nav-link :href="route('dev')" :active="request()->routeIs('dev')">
+                <x-home-nav-link :href="route('web.dev')" :active="request()->routeIs('web.dev')">
                     <x-heroicon-o-folder class="h-6 w-6" />
                 </x-home-nav-link>
 
-                <x-home-nav-link :href="route('projects')" :active="request()->routeIs('projects')">
+                <x-home-nav-link :href="route('web.projects')" :active="request()->routeIs('web.projects')">
                     <x-heroicon-o-folder class="h-6 w-6" />
                 </x-home-nav-link>
 
-                <x-home-nav-link :href="route('aboutme')" :active="request()->routeIs('aboutme')">
+                <x-home-nav-link :href="route('web.aboutme')" :active="request()->routeIs('web.aboutme')">
                     <x-radix-person class="w-6 h-6" />
                 </x-home-nav-link>
 
-                <x-home-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+                <x-home-nav-link :href="route('web.contact')" :active="request()->routeIs('web.contact')">
                     <x-feathericon-mail class="h-6 w-6" />
                 </x-home-nav-link>
 
-                <x-home-nav-link :href="route('opinions')" :active="request()->routeIs('opinions')">
+                <x-home-nav-link :href="route('web.opinions')" :active="request()->routeIs('web.opinions')">
                     <x-far-comment class="h-6 w-6" />
                 </x-home-nav-link>
 

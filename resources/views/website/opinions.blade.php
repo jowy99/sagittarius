@@ -18,7 +18,7 @@
                         <x-p>Si tienes alguna pregunta, colaboración o simplemente quieres saludar, no dudes en ponerte en contacto conmigo. Estaré encantado/a de escucharte y responder lo antes posible.</x-p>
                     </div>
                     <hr class="mt-8 mb-4">
-                    <form action="{{ route('opinions-store') }}" method="post">
+                    <form action="{{ route('web.opinions-store') }}" method="post">
                         @csrf
                         <div class="space-y-8">
                             <div class="grid md:grid-cols-2 gap-4">

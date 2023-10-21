@@ -10,10 +10,10 @@ class StoreDevProjectsRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['nullable'],
-            'description' => ['nullable'],
-            'github' => ['nullable'],
-            'image' => ['nullable'],
+            'title' => ['required', 'max:254'],
+            'description' => ['required', 'max:254'],
+            'github' => ['required'],
+            'image' => ['required'],
         ];
     }
 

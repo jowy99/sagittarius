@@ -82,7 +82,7 @@
                             <x-p>Si tienes alguna pregunta, colaboración o simplemente quieres saludar, no dudes en ponerte en contacto conmigo. Estaré encantado/a de escucharte y responder lo antes posible.</x-p>
                         </div>
                         <hr class="mt-8 mb-4">
-                        <form action="{{ route('send-contact') }}" method="post">
+                        <form action="{{ route('web.send-contact') }}" method="post">
                             @csrf
                             <div class="space-y-4 md:space-y-8">
                                 <div class="grid gap-2 md:grid-cols-2 md:gap-4">

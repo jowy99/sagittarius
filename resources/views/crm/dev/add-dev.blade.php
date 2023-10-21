@@ -9,37 +9,57 @@
                 <div class="">
                     <h1 class="capitalize font-bold text-green-400 dark:text-green_light-600 text-4xl text-center md:text-6xl">add dev project</h1>
                     <hr class="h-1 w-20 mx-auto my-4 bg-green-500 border-0">
-                    <div class="grid lg:grid-cols-2 gap-4 m-4">
-                        <x-form.input-text
-                            id="title"
-                            type="text"
-                            label="Título"
-                            name="title"
-                            placeholder="Título"
-                        ></x-form.input-text>
-                        <x-form.input-text
-                            id="github"
-                            type="text"
-                            label="Github"
-                            name="github"
-                            value="https://github.com/jowy99/"
-                            placeholder="Github"
-                        ></x-form.input-text>
-                    </div>
-                    <div class="grid lg:grid-cols-2 gap-4 m-4">
-                        <x-form.textarea
-                            id="description"
-                            label="Descripción"
-                            name="description"
-                            placeholder="Descripción"
-                        ></x-form.textarea>
-                        <x-form.input-file
-                            id="image"
-                            name="image"
-                        ></x-form.input-file>
+                    <div class="space-y-4">
+                        <div>
+                            <h2 class="capitalize ml-4 font-bold text-green-400 dark:text-green_light-600 text-2xl md:text-4xl">Titulo</h2>
+                            <div class="grid lg:grid-cols-2 gap-4 m-4">
+                                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $devs)
+                                    <x-form.input-text
+                                        id="title"
+                                        type="text"
+                                        name="title[{{ $devs['native'] }}]"
+                                        placeholder="{{ $devs['native'] }}"
+                                    ></x-form.input-text>
+                                @endforeach
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="capitalize ml-4 font-bold text-green-400 dark:text-green_light-600 text-2xl md:text-4xl">Descripción</h2>
+                            <div class="grid lg:grid-cols-2 gap-4 m-4">
+                                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $devs)
+                                    <x-form.textarea
+                                        id="description"
+                                        label="Descripción"
+                                        name="description[{{ $devs['native'] }}]"
+                                        placeholder="{{ $devs['native'] }}"
+                                    ></x-form.textarea>
+                                @endforeach
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="capitalize ml-4 font-bold text-green-400 dark:text-green_light-600 text-2xl md:text-4xl">GitHub</h2>
+                            <div class="m-4">
+                                <x-form.input-text
+                                    id="github"
+                                    type="text"
+                                    label="Github"
+                                    name="github"
+                                    value="https://github.com/jowy99/"
+                                    placeholder="Github"
+                                ></x-form.input-text>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="capitalize ml-4 font-bold text-green-400 dark:text-green_light-600 text-2xl md:text-4xl">Foto</h2>
+                            <div class="m-4">
+                                <x-form.input-file
+                                    id="image"
+                                    name="image"
+                                ></x-form.input-file>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
                 <x-form.submit>{{ __('crm.default.guardar') }}</x-form.submit>
             </form>
         </div>

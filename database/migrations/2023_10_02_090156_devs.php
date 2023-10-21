@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('devs', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('title');
-            $table->text('description');
+            $table->json('title');
+            $table->json('description');
             $table->string('github');
             $table->timestamps();
         });

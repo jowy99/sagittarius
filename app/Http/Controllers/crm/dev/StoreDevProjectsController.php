@@ -8,12 +8,17 @@ use App\Models\devs;
 use App\Http\Requests\crm\dev\StoreDevProjectsRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Str;
 
 class StoreDevProjectsController extends Controller
 {
     public function __invoke(StoreDevProjectsRequest $request): RedirectResponse
     {
-        $devs = devs::query()->create($request->validated());
+        $data = $request->validated();
+
+        dd($data);
+
+        $devs = devs::query()->create($data);
 
         $devs->addMediaFromRequest('image')
             ->withResponsiveImages()

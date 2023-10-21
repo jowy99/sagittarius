@@ -8,7 +8,7 @@
                 <ul role="list" class="-mx-2 space-y-2">
                     <li>
                         <!-- Current: "bg-green-700 text-white", Default: "text-green-200 hover:text-white hover:bg-green-700" -->
-                        <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                        <x-nav-link :href="route('web.home')">
                             <x-heroicon-o-home class="h-6 w-6" />
                             Home
                         </x-nav-link>
@@ -25,7 +25,7 @@
                     <hr>
 
                     <li>
-                        <x-nav-link :href="route('dev')" :active="request()->routeIs('dev')">
+                        <x-nav-link :href="route('web.dev')">
                             <x-heroicon-o-folder class="h-6 w-6" />
                             Dev projects
                         </x-nav-link>
@@ -55,7 +55,7 @@
                     <hr>
 
                     <li>
-                        <x-nav-link :href="route('projects')" :active="request()->routeIs('projects')">
+                        <x-nav-link :href="route('web.projects')">
                             <x-heroicon-o-folder class="h-6 w-6" />
                             Projects
                         </x-nav-link>
@@ -85,7 +85,7 @@
                     <hr>
 
                     <li>
-                        <x-nav-link>
+                        <x-nav-link :href="route('web.aboutme')">
                             <x-radix-person class="w-6 h-6" />
                             About me
                         </x-nav-link>
@@ -102,7 +102,7 @@
                     <hr>
 
                     <li>
-                        <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+                        <x-nav-link :href="route('web.contact')">
                             <x-feathericon-mail class="h-6 w-6" />
                             Contact
                         </x-nav-link>
@@ -119,7 +119,7 @@
                     <hr>
 
                     <li>
-                        <x-nav-link :href="route('opinions')" :active="request()->routeIs('opinions')">
+                        <x-nav-link :href="route('web.opinions')">
                             <x-far-comment class="w-6 h-6" />
                             Opinions
                         </x-nav-link>
@@ -165,7 +165,7 @@
             <x-slot name="content">
                 <div class="max-h-80 relative overflow-y-auto scroll-smooth">
                     <div class="flex flex-col">
-                        <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                        <x-nav-link :href="route('web.home')">
                             <x-heroicon-o-home class="h-6 w-6" />
                             Home
                         </x-nav-link>
@@ -182,7 +182,7 @@
                     <hr>
 
                     <div class="flex flex-col">
-                        <x-nav-link :href="route('dev')" :active="request()->routeIs('dev')">
+                        <x-nav-link :href="route('web.dev')">
                             <x-heroicon-o-folder class="h-6 w-6" />
                             Dev projects
                         </x-nav-link>
@@ -212,7 +212,7 @@
                     <hr>
 
                     <div class="flex flex-col">
-                        <x-nav-link :href="route('projects')" :active="request()->routeIs('projects')">
+                        <x-nav-link :href="route('web.projects')">
                             <x-heroicon-o-folder class="h-6 w-6" />
                             Projects
                         </x-nav-link>
@@ -242,7 +242,7 @@
                     <hr>
 
                     <div class="flex flex-col">
-                        <x-nav-link :href="route('aboutme')" :active="request()->routeIs('aboutme')">
+                        <x-nav-link :href="route('web.aboutme')">
                             <x-radix-person class="w-6 h-6" />
                             About me
                         </x-nav-link>
@@ -259,7 +259,7 @@
                     <hr>
 
                     <div class="flex flex-col">
-                        <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+                        <x-nav-link :href="route('web.contact')">
                             <x-feathericon-mail class="h-6 w-6" />
                             Contact
                         </x-nav-link>
@@ -276,7 +276,7 @@
                     <hr>
 
                     <div class="flex flex-col">
-                        <x-nav-link :href="route('opinions')" :active="request()->routeIs('opinions')">
+                        <x-nav-link :href="route('web.opinions')">
                             <x-far-comment class="w-6 h-6" />
                             Opinions
                         </x-nav-link>

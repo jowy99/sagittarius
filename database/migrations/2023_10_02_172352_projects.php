@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('title');
-            $table->text('description');
+            $table->json('title');
+            $table->json('description');
             $table->string('file');
             $table->boolean('download')->default(true);
             $table->timestamps();

@@ -19,6 +19,11 @@ class devs extends Model implements HasMedia
         return self::query()->count();
     }
 
+    public array $translatable = [
+        'title',
+        'description',
+    ];
+
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('devProjects')
