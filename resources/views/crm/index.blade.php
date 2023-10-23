@@ -10,22 +10,6 @@
                     <h1 class="capitalize font-bold text-green-400 dark:text-green_light-600 text-4xl text-center md:text-6xl">edit home page</h1>
                     <hr class="h-1 w-20 mx-auto my-4 bg-green-500 border-0">
                     <div class="grid lg:grid-cols-2 gap-4 m-4">
-                        <x-form.input-text
-                            id="nombre"
-                            name="nombre"
-                            label="Nombre"
-                            value="{{ __('website.home.hero.personalname') }}"
-                            placeholder="{{ __('crm.default.nombre') }}"
-                        ></x-form.input-text>
-                        <x-form.input-text
-                            id="apellido"
-                            name="apellido"
-                            label="Apellido"
-                            value="{{ __('website.home.hero.personalsurname') }}"
-                            placeholder="{{ __('crm.default.apellido') }}"
-                        ></x-form.input-text>
-                    </div>
-                    <div class="grid lg:grid-cols-2 gap-4 m-4">
                         <x-form.textarea
                             id="herotext"
                             label="Texto inicial"

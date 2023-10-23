@@ -9,6 +9,7 @@ use App\Http\Requests\crm\dev\StoreDevProjectsRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Str;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class StoreDevProjectsController extends Controller
 {
@@ -16,7 +17,7 @@ class StoreDevProjectsController extends Controller
     {
         $data = $request->validated();
 
-        dd($data);
+//        dd($data);
 
         $devs = devs::query()->create($data);
 

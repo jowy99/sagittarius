@@ -17,7 +17,7 @@
                                     <x-form.input-text
                                         id="title"
                                         type="text"
-                                        name="title[{{ $devs['native'] }}]"
+                                        name="title[{{ $devs['short'] }}]"
                                         placeholder="{{ $devs['native'] }}"
                                     ></x-form.input-text>
                                 @endforeach
@@ -30,7 +30,7 @@
                                     <x-form.textarea
                                         id="description"
                                         label="Descripción"
-                                        name="description[{{ $devs['native'] }}]"
+                                        name="description[{{ $devs['short'] }}]"
                                         placeholder="{{ $devs['native'] }}"
                                     ></x-form.textarea>
                                 @endforeach

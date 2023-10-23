@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use App\Http\Middleware\AdminLanguageMiddleware;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -50,6 +49,9 @@ class RouteServiceProvider extends ServiceProvider
                 'auth',
                 'verified',
                 'admin',
+                'localize',
+                'localeSessionRedirect',
+                'localizationRedirect',
             ])
                 ->prefix('admin')
                 ->as('crm.')

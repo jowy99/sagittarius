@@ -20,14 +20,14 @@ class Authenticate
     public function handle(Request $request, Closure $next): mixed
     {
         return $next($request);
-        /*if ($this->auth->guard()->check()) {
-            if ($this->auth->guard()->user()->is_admin) {
-                return $next($request);
-            }
+//        if ($this->auth->guard()->check()) {
+//            if ($this->auth->guard()->user()->is_admin) {
+//                return $next($request);
+//            }
+//
+////            return redirect()->route('crm.crm');
+//        }
 
-            return redirect()->route('crm.dashboard');
-        }
-
-        return redirect('/');*/
+//        return redirect('/login');
     }
 }

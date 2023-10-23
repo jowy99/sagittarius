@@ -14,15 +14,15 @@ class devs extends Model implements HasMedia
     use InteractsWithMedia;
     protected $guarded = ['id'];
 
-    public function count(): int
-    {
-        return self::query()->count();
-    }
-
     public array $translatable = [
         'title',
         'description',
     ];
+
+    public function count(): int
+    {
+        return self::query()->count();
+    }
 
     public function registerMediaCollections(): void
     {

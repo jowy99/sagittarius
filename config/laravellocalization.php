@@ -8,12 +8,14 @@ return [
     'supportedLocales' => [
         'es' => [
             'name' => 'Spanish',
+            'short' => 'es',
             'script' => 'Latn',
             'native' => 'Español',
             'regional' => 'es_ES',
         ],
         'en' => [
             'name' => 'English',
+            'short' => 'en',
             'script' => 'Latn',
             'native' => 'English',
             'regional' => 'en_GB',

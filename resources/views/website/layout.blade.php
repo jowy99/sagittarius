@@ -21,7 +21,7 @@
     </head>
     <body class="font-sans antialiased dark:bg-zinc-800">
         <div>
-            @if (Route::has('login'))
+            @if (Route::has('auth.login'))
             <div class="sm:fixed sm:top-0 left-0 sm:right-0 p-6 text-right z-10">
                 @auth
                 <div class="flex sm:items-center sm:ml-6">
@@ -39,15 +39,15 @@
                         </x-slot>
 
                         <x-slot name="content">
-                            <x-dropdown-link :href="route('profile.edit')">
+                            <x-dropdown-link :href="route('web.profile.edit')">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
 
                             <!-- Authentication -->
-                            <form method="POST" action="{{ route('logout') }}">
+                            <form method="POST" action="{{ route('web.logout') }}">
                                 @csrf
 
-                                <x-dropdown-link :href="route('logout')"
+                                <x-dropdown-link :href="route('web.logout')"
                                                  onclick="event.preventDefault();
                                                         this.closest('form').submit();">
                                     {{ __('Log Out') }}
