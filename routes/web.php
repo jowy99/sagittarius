@@ -18,6 +18,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/dev', ShowDevProjectsController::class)->name('dev');
+Route::get('/dev/memory', function () { return view('memorygame.memory'); })->name('memorygame');
 
 Route::get('/projects', ShowProjectsController::class)->name('projects');
 Route::get('/projects/download/{file}', DownloadFileController::class)->name('projects-download');

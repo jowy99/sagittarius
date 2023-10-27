@@ -53,7 +53,7 @@ class RouteServiceProvider extends ServiceProvider
                 'localeSessionRedirect',
                 'localizationRedirect',
             ])
-                ->prefix('admin')
+                ->prefix(LaravelLocalization::setLocale().'/admin')
                 ->as('crm.')
                 ->group(base_path('routes/crm.php'));
         });
